@@ -13,14 +13,14 @@ type Numeros struct {
 
 // Creamos una Instancia
 func main() {
-	text := "{\"Valores\": [3, 5, 5, 6, 8, 3, 4, 4, 7, 7, 1, 1, 2]}"
+	text := "{\"Valores\": [4, 5, 2, 3, 7, 8, 9, 1, 10, 11, 56, 0, 13]}"
 	bytes := []byte(text)
 	var resultados Numeros
 	json.Unmarshal(bytes, &resultados)
 	fmt.Printf("Sin Clasificar = %v", resultados.Valores)
 
 	/*El paquete `sort` de Go implementa ordenamiento para los tipos primitivos y definidos por el usuario.*/
-	ints := []int{3, 5, 5, 6, 8, 3, 4, 4, 7, 7, 1, 1, 2}
+	ints := []int{4, 5, 2, 3, 7, 8, 9, 1, 10, 11, 56, 0, 13}
 	sort.Ints(ints)
 	crear_json, _ := json.Marshal(ints)
 	convertir_a_cadena := string(crear_json)
